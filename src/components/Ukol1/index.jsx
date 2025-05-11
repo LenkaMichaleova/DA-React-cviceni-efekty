@@ -10,7 +10,7 @@ Poznámka: Nemáte jak prakticky ověřit, že se to zobrazí při každém vykr
 
 export const Ukol1 = () => {
   useEffect(() => {
-    // Zde napište svůj kód...
+    console.log("jsem tady! 1")
   }, []);
 
   return (

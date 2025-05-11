@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 /*
 Zadání: Vytvořte v této komponentě efekt, který se spustí při PRVNÍM vykreslení komponenty
   a v konzoli vypíše text „Jsem tady“.
@@ -7,6 +8,10 @@ Poznámka: nemáte jak ověřit změnu oproti předchozímu příkladu. Důleži
 */
 
 export const Ukol2 = () => {
+  useEffect(() => {
+    console.log("jsem tady! 2")
+  }, [])
+
   return (
     <>
       <p>Jsem tady</p>

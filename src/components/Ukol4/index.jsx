@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 /*
 Zadání 1: Vytvořte v této komponentě stav `nacteno`, který bude mít výchozí hodnotu `false`.
   Dále vytvořte efekt, který po 3 vteřinách od prvního načtení komponenty nastaví stav `nacteno` na `true`.
@@ -7,9 +8,16 @@ Zadání 2: Pomocí ternárního operátoru zobrazte text `Načítám…` nebo `
 */
 
 export const Ukol4 = () => {
+  const [nacteno, setNacteno] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => setNacteno(true), 3000)
+  }, [])
+
+
   return (
     <>
-      <p>Načítám…</p>
+      {!nacteno ? <p>Načítám…</p> : <p>Hotovo</p>}
     </>
   );
 };
